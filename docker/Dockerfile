@@ -86,7 +86,12 @@ RUN apt-get update && apt-get install -y \
       po4a \
       openssh-client \
       jq \
-      grub2
+      grub2 \
+      kpartx \
+      parted \
+      udev \
+      grub-pc \
+      grub2-common
 
 # Syslinux is only supported on x86 and x64 systems
 RUN if dpkg-architecture -ii386 || dpkg-architecture -iamd64; then \
